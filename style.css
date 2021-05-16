@@ -1,0 +1,229 @@
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    scroll-behavior: smooth;
+
+    list-style: none;
+
+}
+
+body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+}
+
+nav {
+
+    background: #000;
+
+    width: 1050px;
+
+    margin-top: 1rem;
+    padding: 1rem;
+
+    position: fixed;
+    top: 0;
+
+    transition: 0.2s;
+
+}
+
+nav ul {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav ul a li {
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+
+    text-align: center;
+
+    width: 125px;
+
+    transition: 0.2s;
+
+}
+
+nav ul a li:hover {
+
+    background: white;
+    color: black;
+
+    box-shadow: 0 0 10px white;
+
+    transform: scale(1.2);
+
+}
+
+div {
+
+    width: 100%;
+    height: 100vh;
+
+}
+
+.labelFas {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0889b1;
+    color: white;
+
+    font-size: 1.5rem;
+
+    border-radius: 5px;
+
+    box-shadow: 0 0 10px white;
+
+    width: 40px;
+    height: 40px;
+
+    position: fixed;
+    right: 1rem;
+    bottom: 1.5rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.labelFas:hover {
+
+    transform: scale(1.2);
+
+}
+
+#checkbox {
+
+    display: none;
+
+}
+
+#labelCheckbox {
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: black;
+    color: white;
+
+    font-size: 1.5rem;
+
+    border-radius: 5px;
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    position: fixed;
+    top: 0.8rem;
+
+}
+
+#labelCheckbox:hover {
+
+    background: white;
+    color: black;
+
+    box-shadow: 0 0 10px white;
+
+    transform: scale(1.1);
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    nav {
+
+        width: 900px;
+
+        padding: 0.5rem 1rem;
+
+    }
+
+    nav ul a li {
+
+        font-size: 1.5rem;
+
+        width: 90px;
+
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+
+    nav {
+
+        width: 100vw;
+        height: 100%;
+
+        margin: 0;
+
+        top: -100vh;
+
+        transition: 0.2s;
+
+        overflow: hidden;
+
+    }
+
+    nav ul {
+
+        margin-top: 4rem;
+
+        flex-direction: column;
+
+        height: 90%;
+
+    }
+
+    nav ul a li {
+
+        padding: 1rem 0;
+
+        width: 100vw;
+
+    }
+
+    #labelCheckbox {
+
+        display: flex;
+
+        z-index: 10;
+
+    }
+
+    #checkbox:checked~nav {
+
+        top: 0;
+
+    }
+
+}
